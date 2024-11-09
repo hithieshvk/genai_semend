@@ -1,0 +1,136 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f7fa; /* Light, clean background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 32px;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#chatbox {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#chatbox p {
+  margin: 0;
+  padding: 12px 15px;
+}
+
+.botText,
+.userText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.botText span,
+.userText span {
+  padding: 12px 18px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.botText span {
+  background-color: #3498db; /* Elegant blue for the bot */
+  color: white;
+  margin-left: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.userText span {
+  background-color: #ecf0f1; /* Light grey for user messages */
+  color: #34495e;
+  margin-right: 15px;
+  align-self: flex-end;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#userInput {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+}
+
+#textInput {
+  width: 80%;
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: 1px solid #bdc3c7;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#textInput:focus {
+  border-color: #3498db;
+}
+
+#buttonInput {
+  width: 15%;
+  padding: 14px 20px;
+  border-radius: 50px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#buttonInput:hover {
+  background-color: #2980b9;
+}
+
+#buttonInput:focus {
+  outline: none;
+}
+
+#userInput {
+  padding: 10px 0;
+}
+
+#chatbox {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.messages-content {
+  padding-bottom: 70px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.botText,
+.userText {
+  animation: fadeIn 0.5s ease-in-out;
+}
